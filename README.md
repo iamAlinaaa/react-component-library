@@ -12,14 +12,15 @@ A modern React component library built with TypeScript and Storybook. Features t
 - **ESLint + Prettier** - Code quality and formatting
 - **React Hook Form** - Form validation and management
 
-
 ## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js 18+ 
+
+- Node.js 18+
 - npm or yarn
-  
+
 ### Installation
+
 ```bash
 # Clone the repository
 git clone https://github.com/iamAlinaaa/react-component-library.git
@@ -30,14 +31,6 @@ npm install
 # Run Storybook
 npm run storybook
 ```
-
-
-
-
-
-
-
-
 
 <img width="2545" height="1307" alt="Снимок экрана 2025-10-01 210822" src="https://github.com/user-attachments/assets/1f334cf9-edec-4fea-a9fd-3fe5a886e301" />
 <img width="2553" height="1305" alt="Снимок экрана 2025-10-01 210815" src="https://github.com/user-attachments/assets/682f599c-9de2-4fc1-bf24-daf6a1808f6d" />
