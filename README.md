@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# React Component Library
 
-## Getting Started
+A modern React component library built with TypeScript and Storybook. Features three reusable UI components with full documentation and interactive examples.
 
-First, run the development server:
+## 🛠 Tech Stack
 
+- **React 19** - UI library with latest features
+- **TypeScript** - Type safety and better developer experience
+- **Storybook 9** - Component documentation and testing
+- **Next.js 15** - React framework and build tooling
+- **Sass/SCSS** - Styling with CSS modules
+- **ESLint + Prettier** - Code quality and formatting
+- **React Hook Form** - Form validation and management
+
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ 
+- npm or yarn
+  
+### Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone https://github.com/iamAlinaaa/react-component-library.git
+
+# Install dependencies
+npm install
+
+# Run Storybook
+npm run storybook
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<img width="2545" height="1307" alt="Снимок экрана 2025-10-01 210822" src="https://github.com/user-attachments/assets/1f334cf9-edec-4fea-a9fd-3fe5a886e301" />
+<img width="2553" height="1305" alt="Снимок экрана 2025-10-01 210815" src="https://github.com/user-attachments/assets/682f599c-9de2-4fc1-bf24-daf6a1808f6d" />
+<img width="2542" height="1359" alt="Снимок экрана 2025-10-01 210757" src="https://github.com/user-attachments/assets/f96eb8f6-cc2f-41d0-a714-3ebb3d9feb7f" />
+<img width="2546" height="1374" alt="Снимок экрана 2025-10-01 210730" src="https://github.com/user-attachments/assets/1c033d1c-cdf1-4f14-86ba-68c8dd4d7666" />
+<img width="2547" height="1336" alt="Снимок экрана 2025-10-01 210917" src="https://github.com/user-attachments/assets/e095a7e7-8975-4b04-bdea-4bb9fed98fc1" />
+<img width="2537" height="1340" alt="Снимок экрана 2025-10-01 211338" src="https://github.com/user-attachments/assets/dece2ce6-cca3-4ef6-adf0-6b28531b8d62" />
+<img width="2545" height="1213" alt="Снимок экрана 2025-10-01 210843" src="https://github.com/user-attachments/assets/629a32ee-4911-46b7-86d4-38e09f4c5659" />
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<img width="2514" height="1332" alt="Снимок экрана 2025-10-01 211008" src="https://github.com/user-attachments/assets/e2661c68-597e-4328-a485-6bbfc385b8ae" />
+<img width="2507" height="1337" alt="Снимок экрана 2025-10-01 211017" src="https://github.com/user-attachments/assets/8184df4d-5bd2-4f35-aebe-2f3c83ef9321" />
