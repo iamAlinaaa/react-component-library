@@ -1,95 +1,115 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { useState } from 'react';
+import { useForm, FormProvider } from 'react-hook-form';
+import { Input, Toast, SidebarMenu } from '@/components';
+import { HomeIcon, ShoppingCartIcon, SettingsIcon } from '@/components/Icons';
+import styles from './page.module.css';
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const [showToast, setShowToast] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+  const methods = useForm({
+    mode: 'onChange',
+  });
+
+  return (
+    <FormProvider {...methods}>
+      <div className={styles.container}>
+        <h1>Component Library Demo</h1>
+
+        <section className={styles.section}>
+          <h2>Input</h2>
+
+          <div className={styles.inputsGrid}>
+            <Input
+              name="username"
+              label="Username"
+              placeholder="Enter your username"
+              minLength={3}
+              maxLength={20}
+              helperText="3-20 characters"
+              clearable={true}
             />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+            <Input
+              name="email"
+              type="email"
+              label="Email"
+              placeholder="Enter your email"
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              helperText="Enter valid email address"
+              clearable={true}
+            />
+
+            <Input
+              name="password"
+              type="password"
+              label="Password"
+              placeholder="Enter your password"
+              minLength={6}
+              helperText="Minimum 6 characters"
+              clearable
+            />
+
+            <Input
+              name="phone"
+              type="tel"
+              label="Phone Number"
+              placeholder="Enter your phone"
+              pattern="[0-9+\\-\\s()]+"
+              helperText="Optional phone number"
+            />
+          </div>
+        </section>
+
+        {/* Toast demo */}
+        <section className={styles.section}>
+          <h2>Toast Component</h2>
+          <button onClick={() => setShowToast(true)} className={styles.button}>
+            Show Toast
+          </button>
+          {showToast && (
+            <Toast
+              type="success"
+              message="Operation completed successfully!"
+              duration={3000}
+              onClose={() => setShowToast(false)}
+            />
+          )}
+        </section>
+
+        {/* Sidebar demo */}
+        <section className={styles.section}>
+          <h2>Sidebar Menu</h2>
+          <button onClick={() => setIsMenuOpen(true)} className={styles.button}>
+            Open Menu
+          </button>
+          <SidebarMenu
+            isOpen={isMenuOpen}
+            onClose={() => setIsMenuOpen(false)}
+            title="Main Menu"
+            items={[
+              {
+                id: '1',
+                label: 'Home',
+                icon: <HomeIcon size={20} />,
+              },
+              {
+                id: '2',
+                label: 'Products',
+                icon: <ShoppingCartIcon size={20} />,
+              },
+              {
+                id: '3',
+                label: 'Settings',
+                icon: <SettingsIcon size={20} />,
+              },
+            ]}
           />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </section>
+      </div>
+    </FormProvider>
   );
 }
